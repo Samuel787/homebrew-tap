@@ -12,18 +12,10 @@ class Qx < Formula
     if Hardware::CPU.intel?
       url "https://github.com/Samuel787/qx/releases/download/v0.1.7/qx_0.1.7_darwin_amd64.tar.gz"
       sha256 "0844240879bea6098ee31439d5e74c42543cc7d7dd909d5944a624ae64c11b98"
-
-      def install
-        bin.install "qx"
-      end
     end
     if Hardware::CPU.arm?
       url "https://github.com/Samuel787/qx/releases/download/v0.1.7/qx_0.1.7_darwin_arm64.tar.gz"
       sha256 "c5c2d8d07b4cb0f3fe84c6075b2fcfde59286222667a560254ccee8ee23fdcaa"
-
-      def install
-        bin.install "qx"
-      end
     end
   end
 
@@ -31,17 +23,15 @@ class Qx < Formula
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Samuel787/qx/releases/download/v0.1.7/qx_0.1.7_linux_amd64.tar.gz"
       sha256 "3db05412eca84c8badc6ac8e8117b673813babee9359f63a11e7f4cd2fe33ffc"
-      def install
-        bin.install "qx"
-      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Samuel787/qx/releases/download/v0.1.7/qx_0.1.7_linux_arm64.tar.gz"
       sha256 "0396f09b5158039dcf1037b63aebdf64d33bc64e4fb406344d1e8265f33fccad"
-      def install
-        bin.install "qx"
-      end
     end
+  end
+
+  def install
+    bin.install "qx"
   end
 
   test do
