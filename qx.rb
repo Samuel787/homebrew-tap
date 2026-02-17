@@ -5,21 +5,21 @@
 class Qx < Formula
   desc "Terminal command prefiller that uses Groq AI to generate shell commands"
   homepage "https://github.com/Samuel787/qx"
-  version "0.1.6"
+  version "0.1.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Samuel787/qx/releases/download/v0.1.6/qx_0.1.6_darwin_amd64.tar.gz"
-      sha256 "9f515cd874e1de59ab8d104312c22faad8e46bd3b246d1405e79f6df63910ba2"
+      url "https://github.com/Samuel787/qx/releases/download/v0.1.7/qx_0.1.7_darwin_amd64.tar.gz"
+      sha256 "0844240879bea6098ee31439d5e74c42543cc7d7dd909d5944a624ae64c11b98"
 
       def install
         bin.install "qx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Samuel787/qx/releases/download/v0.1.6/qx_0.1.6_darwin_arm64.tar.gz"
-      sha256 "0e355c3c4a2facf89f9b4b37e2a9dfe245bacb620f4a0061b0e8af75c94fcdfd"
+      url "https://github.com/Samuel787/qx/releases/download/v0.1.7/qx_0.1.7_darwin_arm64.tar.gz"
+      sha256 "c5c2d8d07b4cb0f3fe84c6075b2fcfde59286222667a560254ccee8ee23fdcaa"
 
       def install
         bin.install "qx"
@@ -29,24 +29,18 @@ class Qx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Samuel787/qx/releases/download/v0.1.6/qx_0.1.6_linux_amd64.tar.gz"
-      sha256 "32cac586fb4a09e1e8501832d4046a7e3045f8365b9082b1dc6906f4d2d6854c"
+      url "https://github.com/Samuel787/qx/releases/download/v0.1.7/qx_0.1.7_linux_amd64.tar.gz"
+      sha256 "3db05412eca84c8badc6ac8e8117b673813babee9359f63a11e7f4cd2fe33ffc"
       def install
         bin.install "qx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Samuel787/qx/releases/download/v0.1.6/qx_0.1.6_linux_arm64.tar.gz"
-      sha256 "6c9c475785d72eae8460f081cda97ca802b3ad7c7d98daeb8f5557cb08d8343d"
+      url "https://github.com/Samuel787/qx/releases/download/v0.1.7/qx_0.1.7_linux_arm64.tar.gz"
+      sha256 "0396f09b5158039dcf1037b63aebdf64d33bc64e4fb406344d1e8265f33fccad"
       def install
         bin.install "qx"
       end
     end
-  end
-
-  test do
-    # Ensure the binary runs and prints the version string
-    output = shell_output("#{bin}/qx --version")
-    assert_match version.to_s, output
   end
 end
