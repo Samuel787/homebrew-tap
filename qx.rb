@@ -43,4 +43,8 @@ class Qx < Formula
       end
     end
   end
+
+  test do
+    assert_match version.to_s, shell_output("#{bin}/qx --version")
+  end
 end
