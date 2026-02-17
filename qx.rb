@@ -43,4 +43,10 @@ class Qx < Formula
       end
     end
   end
+
+  test do
+    # Ensure the binary runs and prints the version string
+    output = shell_output("#{bin}/qx --version")
+    assert_match version.to_s, output
+  end
 end
