@@ -5,21 +5,21 @@
 class Qx < Formula
   desc "Terminal command prefiller that uses Groq AI to generate shell commands"
   homepage "https://github.com/Samuel787/qx"
-  version "0.1.10"
+  version "0.1.12"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Samuel787/qx/releases/download/v0.1.10/qx_0.1.10_darwin_amd64.tar.gz"
-      sha256 "56ff6d7af5cbdbcc32358967c67f47e15bf61a1d0f77e78dfe3661c4998abc5a"
+      url "https://github.com/Samuel787/qx/releases/download/v0.1.12/qx_0.1.12_darwin_amd64.tar.gz"
+      sha256 "80667ec29d1f1456234d3fc0a189a7a7c7f9c2639fa86e39e498f116c9504665"
 
       def install
         bin.install "qx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Samuel787/qx/releases/download/v0.1.10/qx_0.1.10_darwin_arm64.tar.gz"
-      sha256 "2c04cc9f493f0fa268410d85968a1b79c0bea51af7ba72437b0d17cf86820db7"
+      url "https://github.com/Samuel787/qx/releases/download/v0.1.12/qx_0.1.12_darwin_arm64.tar.gz"
+      sha256 "044962f110853052451a80b0a5764d98dd52a93f3f740f00e21535e5082a74cd"
 
       def install
         bin.install "qx"
@@ -29,15 +29,15 @@ class Qx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Samuel787/qx/releases/download/v0.1.10/qx_0.1.10_linux_amd64.tar.gz"
-      sha256 "3d751dca9ad82dc8d98f8e12ae8cd9edbdad4b8240b2f29fc9de11e8a9dac848"
+      url "https://github.com/Samuel787/qx/releases/download/v0.1.12/qx_0.1.12_linux_amd64.tar.gz"
+      sha256 "fa81ae436cdc5e02c73eed7f68b05f7fc7783082f1c2c272f9574c45a15ce38a"
       def install
         bin.install "qx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Samuel787/qx/releases/download/v0.1.10/qx_0.1.10_linux_arm64.tar.gz"
-      sha256 "8c8a662d55d26a11368355286b775c9847805d396e56fb8ebc08d281b77aab33"
+      url "https://github.com/Samuel787/qx/releases/download/v0.1.12/qx_0.1.12_linux_arm64.tar.gz"
+      sha256 "002657c3d4034c01c3e430f1a0bbb2699a00a7ede989b45a7b89560fbd0ed430"
       def install
         bin.install "qx"
       end
